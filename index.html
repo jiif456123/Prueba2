@@ -10,30 +10,25 @@
     <h1>Hola Mundo 4</h1>
 
     <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                // Configuración de idioma
-                embeddedservice_bootstrap.settings.language = 'es_MX'; 
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'es_MX'; // For example, enter 'en' or 'en-US'
 
-                // Inicialización con los IDs de la sandbox de UAT
-                embeddedservice_bootstrap.init(
-                    '00DHZ000006bOsk',
-                    'pz_PLUZWEBB2CUAT',
-                    'https://pluz--uat.sandbox.my.site.com/ESWpzPLUZWEBB2CUAT1760993403095',
-                    {
-                        scrt2URL: 'https://pluz--uat.sandbox.my.salesforce-scrt.com'
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        };
-    </script>
+			embeddedservice_bootstrap.init(
+				'00DHZ000006bOsk',
+				'PRUEBA2BOT',
+				'https://pluz--uat.sandbox.my.site.com/ESWPRUEBA2BOT1774493324103',
+				{
+					scrt2URL: 'https://pluz--uat.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://pluz--uat.sandbox.my.site.com/ESWPRUEBA2BOT1774493324103/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-    <script type='text/javascript' 
-            src='https://pluz--uat.sandbox.my.site.com/ESWpzPLUZWEBB2CUAT1760993403095/assets/js/bootstrap.min.js' 
-            onload='initEmbeddedMessaging()'>
-    </script>
 
 </body>
 </html>
